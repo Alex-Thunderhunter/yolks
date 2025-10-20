@@ -16,19 +16,24 @@ RUN         dpkg --add-architecture i386 \
                 gcc \
                 gdb \
                 iproute2 \
+                jq \
                 locales \
+                musl-dev \
                 net-tools \
                 netcat-traditional \
                 tar \
                 telnet \
                 tini \
                 tzdata \
+                unzip \
                 wget \
                 xvfb \
                 lib32gcc-s1 \
                 lib32stdc++6 \
                 lib32tinfo6 \
                 lib32z1 \
+                libc6 \
+                libc6-dev \
                 libcurl3-gnutls:i386 \
                 libcurl4-gnutls-dev:i386 \
                 libcurl4:i386 \
@@ -40,7 +45,8 @@ RUN         dpkg --add-architecture i386 \
                 libsdl2-2.0-0 \
                 libsdl2-2.0-0:i386 \
                 libssl-dev:i386 \
-                libtinfo6:i386
+                libtinfo6:i386 \
+                libx11-dev \
 			&& ln -sf /usr/lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so \
     		&& ln -sf /usr/lib/x86_64-linux-gnu/libdl.so.2 /lib/libdl.so
 
