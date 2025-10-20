@@ -41,6 +41,8 @@ RUN         dpkg --add-architecture i386 \
                 libsdl2-2.0-0:i386 \
                 libssl-dev:i386 \
                 libtinfo6:i386
+			&& ln -sf /usr/lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so \
+    		&& ln -sf /usr/lib/x86_64-linux-gnu/libdl.so.2 /lib/libdl.so
 
 # Install rcon
 RUN         cd /tmp/ \
